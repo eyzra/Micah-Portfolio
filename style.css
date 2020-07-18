@@ -5,8 +5,9 @@
 }
 body{
     background-color: aliceblue;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     font-family: 'Fira Sans';
+    -webkit-font-smoothing: antialiased;
 }
 img{
     max-width: 100%;
@@ -32,7 +33,6 @@ li{
     display: inline;
     padding: 2rem ;
     margin: 0 auto;
-
 }
 h4{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -47,8 +47,9 @@ ul a{
     color: white;
     padding: 0 10px;
     transition: all 2.3s ease;
+    cursor: pointer;
 }
-nav:active {
+a:active {
     background-color: #007EA7;
     color: white;
   }
@@ -113,18 +114,69 @@ h3{
     line-height: 2rem;
 }
 
-#contact{
-    height: 100%;
+#form-header{
+    text-align: center;
+}
+form, label{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+label{
+    text-align: start;
+    padding: 20px;
+}
+form{
+    margin: 1rem 0;
+    padding: 2em 10em;
+    justify-content: space-around;
+}
+textarea{
+    margin-bottom: 12px;
+    font-family: cursive;
+    margin-top: 10px;
+    background-origin: padding-box;
+    text-indent: 11px;
 }
 
 
-@media screen and (max-width: 500px) {
-    nav a {
-      float: none;
-      display: block;
-    }
-  }
+.form{
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+    background-color: #003459;
+    color: #dcdcdf;
+    font-weight: 300;
+    text-align: center;
+}
 
-  
+
+button{
+    color: aliceblue;
+    background-color: #003459;
+    padding: 1em;
+    border-radius: 10px 10px 10px 10px;
+    width: 25em;
+    align-self: center;
+    overflow: visible;
+}
+input{
+    overflow: visible;
+    border: 2px solid #00A8E8;
+    height: 3em;
+    border-radius: 15px 15px 15px 15px ;
+    font-family: cursive;
+    text-indent: 11px;
+}
+button:hover{
+    background-image: linear-gradient(45deg, blue 0%, cyan 50%, royalblue 100%);
+}
+
+input::placeholder{
+    font-family: cursive;
+}
+
+@media only screen and (max-width: 480px){
+html {
+    font-size: 100%;
+}
+}
